@@ -17,5 +17,7 @@
 //= require angular
 //= require jquery
 
-console.log('zzzz')
+//= require ./angular_app/app.js
+//= require ./angular_app/controllers/scraping_urls_ctrl.js
+
 //= require_tree .
