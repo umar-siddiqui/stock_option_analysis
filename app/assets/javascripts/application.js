@@ -12,4 +12,10 @@
 //
 //= require rails-ujs
 //= require turbolinks
+
+
+//= require angular
+//= require jquery
+
+console.log('zzzz')
 //= require_tree .
