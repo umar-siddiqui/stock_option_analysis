@@ -16,6 +16,7 @@
 
 //= require angular
 //= require jquery
+//= require materialize
 
 //= require ./angular_app/app.js
 //= require ./angular_app/controllers/scraping_urls_ctrl.js

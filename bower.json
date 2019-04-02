@@ -3,7 +3,8 @@
     "name": "bower-rails generated lib assets",
     "dependencies": {
       "jquery": "3.2.0",
-      "angular": "1.6.4"
+      "angular": "1.6.4",
+      "materialize": "1.0.0"
     }
   },
   "vendor": {
