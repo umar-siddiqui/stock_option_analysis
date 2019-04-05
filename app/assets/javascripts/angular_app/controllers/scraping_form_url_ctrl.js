@@ -1,6 +1,13 @@
 angular.module('scrapingUrl').controller('scrapingFormUrlCtrl', [
   '$scope',
-  function($scope) {
-    $scope.name = 'Form'
+  '$http',
+  'scrapingUrlService',
+  function($scope, $http, scrapingUrlService) {
+    $scope.formData = {}
+    $scope.save = function() {
+      scrapingUrlService.saveScrapingUrl($scope.formData).then(function(data) {
+        location.href = '/scraping_urls'
+      })
+    }
   }
 ])

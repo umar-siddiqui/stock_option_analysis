@@ -1,29 +1,27 @@
 <div ng-app="scrapingUrl" ng-controller="scrapingUrlsCtrl">
   <h3>Option Chain Analysis Listings</h3>
+  <a class="waves-effect waves-light btn"
+     href="/scraping_urls/new">+ Add URL</a>
   <table class="striped">
     <thead>
       <tr>
           <th>Name</th>
           <th>Url</th>
-          <th>Item Price</th>
+          <th>Date</th>
+          <th>&nbsp;&nbsp;</th>
       </tr>
     </thead>
-
     <tbody>
-      <tr>
-        <td>Alvin</td>
-        <td>Eclair</td>
-        <td>$0.87</td>
-      </tr>
-      <tr>
-        <td>Alan</td>
-        <td>Jellybean</td>
-        <td>$3.76</td>
-      </tr>
-      <tr>
-        <td>Jonathan</td>
-        <td>Lollipop</td>
-        <td>$7.00</td>
+      <tr ng-repeat="url in urls">
+        <td>{{url.name}}</td>
+        <td>{{url.url}}</td>
+        <td>{{url.date}}</td>
+        <td>
+          <a class="waves-effect waves-light btn"
+             href="/scraping_urls/{{url._id}}">
+            View
+          </a>
+        </td>
       </tr>
     </tbody>
   </table>
