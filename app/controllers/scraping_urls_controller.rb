@@ -36,7 +36,7 @@ class ScrapingUrlsController < ApplicationController
 
       format.json do
         url = ScrappingUrl.find(params[:id])
-        render json: url, serializer: ScrappingUrlSerializer
+        render json: url, serializer: ScrappingUrlShowSerializer
       end
     end
   end

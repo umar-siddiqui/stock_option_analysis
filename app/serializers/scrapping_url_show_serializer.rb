@@ -1,5 +1,5 @@
 # class ScrappingUrlSerializer
-class ScrappingUrlSerializer < ActiveModel::Serializer
+class ScrappingUrlShowSerializer < ActiveModel::Serializer
   attributes :name, :url
   has_many :pboxes
 

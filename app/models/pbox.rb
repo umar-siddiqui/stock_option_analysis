@@ -1,5 +1,6 @@
 class Pbox
   include Mongoid::Document
+  include Mongoid::Timestamps
   field :sci, type: Float
   field :ltp_sci, type: Float
   field :sco, type: Float

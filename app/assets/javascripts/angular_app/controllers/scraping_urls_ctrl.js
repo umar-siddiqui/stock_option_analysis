@@ -4,7 +4,7 @@ angular.module('scrapingUrl').controller('scrapingUrlsCtrl', [
   function($scope, scrapingUrlService) {
 
     scrapingUrlService.getScrapingUrls().then(function(data) {
-      $scope.urls = data.data
+      $scope.urls = data.data.scraping_urls
     })
 
     $scope.delete = function(id) {

@@ -1,4 +1,35 @@
 <div ng-app="scrapingUrl" ng-controller="scrapingUrlCtrl">
+  <h3>Url Analysis Listings</h3>
+  <table class="striped">
+    <thead>
+      <tr>
+        <th>SCi</th>
+        <th>LTP SCi</th>
+        <th>SCo</th>
+        <th>LTP SCo</th>
+        <th>SPi</th>
+        <th>LTP SPi</th>
+        <th>SPo</th>
+        <th>LTP SPo</th>
+        <th>PBox Value</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="pbox in url.pboxes">
+        <td>{{pbox.sci}}</td>
+        <td>{{pbox.ltp_sci}}</td>
+        <td>{{pbox.sco}}</td>
+        <td>{{pbox.ltp_sco}}</td>
+        <td>{{pbox.spi}}</td>
+        <td>{{pbox.ltp_spi}}</td>
+        <td>{{pbox.spo}}</td>
+        <td>{{pbox.ltp_spo}}</td>
+        <td>{{pbox.pbox_value}}</td>
+        <td>{{pbox.created_at}}</td>
+      </tr>
+    </tbody>
+  </table>
   <div class="col s12 m2" style="margin-top: 50px;">
     <div class="z-depth-5 row">
       <h3 class="col s11 offset-s1">{{url.name}}</h3>
