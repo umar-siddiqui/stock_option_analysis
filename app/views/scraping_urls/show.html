@@ -1,3 +1,11 @@
 <div ng-app="scrapingUrl" ng-controller="scrapingUrlCtrl">
-  <h3>Show {{name}}</h3>
+  <div class="col s12 m2" style="margin-top: 50px;">
+    <div class="z-depth-5 row">
+      <h3 class="col s11 offset-s1">{{url.name}}</h3>
+      <h5 class="col s11 offset-s1">{{url.url}}</h5>
+      <div class="col s11 offset-s1">
+        <div id="main" style="width:600px; height:400px;"></div>
+      </div>
+    </div>
+  </div>
 </div>

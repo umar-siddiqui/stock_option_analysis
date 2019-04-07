@@ -1,12 +1,15 @@
 angular.module('scrapingUrl').controller('scrapingFormUrlCtrl', [
   '$scope',
-  '$http',
+  '$window',
   'scrapingUrlService',
-  function($scope, $http, scrapingUrlService) {
+  function($scope, $window, scrapingUrlService) {
     $scope.formData = {}
+
     $scope.save = function() {
       scrapingUrlService.saveScrapingUrl($scope.formData).then(function(data) {
-        location.href = '/scraping_urls'
+        $window.location.href = '/scraping_urls'
+      }, function() {
+        alert('Can not added item')
       })
     }
   }

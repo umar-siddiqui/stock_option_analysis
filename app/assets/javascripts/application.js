@@ -11,14 +11,14 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
+// require turbolinks
 
+//= require ./echarts.min.js
 
 //= require angular
 //= require jquery
 //= require materialize
 
 //= require ./angular_app/app.js
-//= require ./angular_app/controllers/scraping_urls_ctrl.js
 
-//= require_tree .
+//= require_tree ./angular_app/controllers

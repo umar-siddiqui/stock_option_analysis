@@ -7,7 +7,7 @@
       <tr>
           <th>Name</th>
           <th>Url</th>
-          <th>Date</th>
+          <th>&nbsp;&nbsp;</th>
           <th>&nbsp;&nbsp;</th>
       </tr>
     </thead>
@@ -15,11 +15,17 @@
       <tr ng-repeat="url in urls">
         <td>{{url.name}}</td>
         <td>{{url.url}}</td>
-        <td>{{url.date}}</td>
         <td>
           <a class="waves-effect waves-light btn"
-             href="/scraping_urls/{{url._id}}">
+             href="/scraping_urls/{{url._id['$oid']}}">
             View
+          </a>
+        </td>
+        <td>
+          <a class="waves-effect waves-light btn"
+             href="javascript:void(0)"
+             ng-click="delete(url._id)">
+            Delete
           </a>
         </td>
       </tr>

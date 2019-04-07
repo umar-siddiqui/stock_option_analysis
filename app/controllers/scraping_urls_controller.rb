@@ -19,7 +19,7 @@ class ScrapingUrlsController < ApplicationController
   end
 
   def update
-    url = ScrappingUrl.find(params[:_id])
+    url = ScrappingUrl.find(params[:id])
     url.update_attributes!(permitted_params)
     render json: url
   end
@@ -29,11 +29,20 @@ class ScrapingUrlsController < ApplicationController
   end
 
   def show
-    render :show
+    respond_to do |format|
+      format.html do
+        render :show
+      end
+
+      format.json do
+        url = ScrappingUrl.find(params[:id])
+        render json: url
+      end
+    end
   end
 
   def destroy
-    url = ScrappingUrl.find(params[:_id])
+    url = ScrappingUrl.find(params[:id])
     url.destroy!
     render json: url
   end
