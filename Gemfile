@@ -10,9 +10,12 @@ end
 gem 'rails', '~> 5.1.6', '>= 5.1.6.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+gem 'nokogiri'
+gem 'awesome_print'
 gem 'mongoid'
 gem "bower-rails", "~> 0.11.0"
 gem 'angular-rails-templates'
+gem 'active_model_serializers', '0.9.3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets

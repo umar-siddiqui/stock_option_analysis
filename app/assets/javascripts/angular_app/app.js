@@ -66,5 +66,13 @@ angular.module('scrapingUrl').service('scrapingUrlService',[
       }
       return PromiseFactory.generateHttpPromise(requestDetails);
     }
+
+    this.calculatePbox = function (id) {
+      var requestDetails = {
+        url: '/scraping_urls/' + id + '/calculate_pbox.json',
+        method: 'GET',
+      }
+      return PromiseFactory.generateHttpPromise(requestDetails);
+    }
   }
 ])

@@ -15,5 +15,10 @@ angular.module('scrapingUrl').controller('scrapingUrlsCtrl', [
       })
     }
 
+    $scope.calculatePbox = function(id) {
+      scrapingUrlService.calculatePbox(id).then(function(data){
+      })
+    }
+
   }
 ])

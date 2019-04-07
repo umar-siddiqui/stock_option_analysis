@@ -36,7 +36,7 @@ class ScrapingUrlsController < ApplicationController
 
       format.json do
         url = ScrappingUrl.find(params[:id])
-        render json: url
+        render json: url, serializer: ScrappingUrlSerializer
       end
     end
   end
@@ -45,6 +45,12 @@ class ScrapingUrlsController < ApplicationController
     url = ScrappingUrl.find(params[:id])
     url.destroy!
     render json: url
+  end
+
+  def calculate_pbox
+    url = ScrappingUrl.find(params[:scraping_url_id])
+    pbox = ScrapingUrlsHelper::Pbox.new(url).calculate
+    render json: pbox
   end
 
   private
