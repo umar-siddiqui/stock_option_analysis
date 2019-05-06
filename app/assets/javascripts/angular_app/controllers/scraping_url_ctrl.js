@@ -1,8 +1,9 @@
 angular.module('scrapingUrl').controller('scrapingUrlCtrl', [
   '$scope',
   '$filter',
+  '$window',
   'scrapingUrlService',
-  function($scope, $filter, scrapingUrlService) {
+  function($scope, $filter, $window, scrapingUrlService) {
     var id = window.location.href.split('/')[window.location.href.split('/').length - 1]
 
     var date_timeline = []
@@ -41,5 +42,12 @@ angular.module('scrapingUrl').controller('scrapingUrlCtrl', [
       // use configuration item and data specified to show chart
       myChart.setOption(option);
     })
+
+
+    $scope.calculatePbox = function(id) {
+      scrapingUrlService.calculatePbox(id).then(function(data){
+        $window.location.reload();
+      })
+    }
   }
 ])
