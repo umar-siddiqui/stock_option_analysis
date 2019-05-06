@@ -13,4 +13,12 @@ class Pbox
 
   # Associations
   belongs_to :scrapping_url
+
+  # callbacks
+  before_save :calculate_pbox
+
+  def calculate_pbox
+    self.pbox_value = (sco - sci) - ((ltp_sco + ltp_spo) - (ltp_sci + ltp_spi))
+    self.pbox_value = self.pbox_value.round(2)
+  end
 end

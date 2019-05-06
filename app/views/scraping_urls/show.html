@@ -25,15 +25,15 @@
   <table class="striped">
     <thead>
       <tr>
-        <th>SCi</th>
-        <th>LTP SCi</th>
-        <th>SCo</th>
-        <th>LTP SCo</th>
-        <th>SPi</th>
-        <th>LTP SPi</th>
-        <th>SPo</th>
-        <th>LTP SPo</th>
-        <th>PBox Value</th>
+        <th>S.P. of call to buy(SCi)</th>
+        <th>LTP of SCi</th>
+        <th>S.P. of call to sell(SCo)</th>
+        <th>LTP of SCo</th>
+        <th>S.P. of put to buy(SPi)</th>
+        <th>LTP of SPi</th>
+        <th>S.P. of put to sell(SPo)</th>
+        <th>LTP of SPo</th>
+        <th>Profit for box spread</th>
         <th>Date</th>
       </tr>
     </thead>
@@ -48,7 +48,7 @@
         <td>{{pbox.spo}}</td>
         <td>{{pbox.ltp_spo}}</td>
         <td>{{pbox.pbox_value}}</td>
-        <td>{{pbox.created_at}}</td>
+        <td>{{pbox.created_at | date: 'yyyy-MM-dd hh:mm a'}}</td>
       </tr>
     </tbody>
   </table>
