@@ -21,7 +21,7 @@ angular.module('scrapingUrl').controller('scrapingUrlCtrl', [
       // specify chart configuration item and data
       var option = {
           title: {
-              text: 'ECharts entry example'
+              text: $scope.url.name + ' box spread profit'
           },
           tooltip: {},
           legend: {
@@ -30,7 +30,9 @@ angular.module('scrapingUrl').controller('scrapingUrlCtrl', [
           xAxis: {
               data: date_timeline
           },
-          yAxis: {},
+          yAxis: {
+              scale: true
+          },
           series: [{
               name: 'Sales',
               type: 'line',

@@ -112,8 +112,6 @@ module ScrapingUrlsHelper
         end
       end
 
-      pbox = (sco - sci) - ((ltp_sco + ltp_spo) - (ltp_sci + ltp_spi))
-
       pbox = {
         sci: sci,
         ltp_sci: ltp_sci,
@@ -123,7 +121,6 @@ module ScrapingUrlsHelper
         ltp_spi: ltp_spi,
         spo: spo,
         ltp_spo: ltp_spo,
-        pbox_value: pbox
       }
       @url.pboxes.create!(pbox)
     end
