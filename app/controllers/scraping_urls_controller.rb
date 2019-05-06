@@ -53,6 +53,13 @@ class ScrapingUrlsController < ApplicationController
     render json: pbox
   end
 
+  def calculate_all_pbox
+    ScrappingUrl.all.each do |url|
+      ScrapingUrlsHelper::Pbox.new(url).calculate
+    end
+    render json: { completed: true }
+  end
+
   private
 
   def permitted_params
